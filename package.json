@@ -1,0 +1,21 @@
+{
+    "name": "pgit",
+    "version": "1.0.5",
+    "description": "Auto complete the add commit pull and push steps",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/qinhangong/gitp"
+    },
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^2.4.2",
+        "commander": "^2.20.0",
+        "inquirer": "^6.5.0"
+    },
+    "bin": {
+        "gitp": "./bin/gitp"
+    }
+}

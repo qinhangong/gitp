@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+
+const program = require('commander');
+const pkg = require('../package.json');
+const fromAddToPush = require('../lib/fromAddToPush');
+const { selectAndCheckoutBranch } = require('../lib/branch')
+
+program.version(pkg.version, '-v,--version');
+
+program
+    .option('-c --check', 'checkout branch')
+    .option('-s --start', 'start work,Auto complete the add commit pull and push steps');
+
+program.parse(process.argv);
+
+if (program.check) {
+    selectAndCheckoutBranch();
+}
+
+if (program.start) {
+    fromAddToPush();
+}
+
+if (!process.argv[2]) {
+    program.outputHelp();
+}
