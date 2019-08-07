@@ -6,13 +6,18 @@
 
 ### 使用
 
-Usage: gitp [options]
+```
+npm install `pgit` -g
 
--   -v,--version output the version number
--   -c --check checkout branch
--   -s --start start work,Auto complete the `add` `commit` `pull` and `push` steps
--   -h, --help output usage information
+gitp -s
+
+gitp -c
+```
 
 ### 注意事项
 
 -   node 版本 8.0 以上支持使用
+
+###License
+
+[MIT](https://github.com/reduxjs/redux/blob/master/LICENSE.md)
