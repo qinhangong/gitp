@@ -1,6 +1,6 @@
 {
     "name": "pgit",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "Auto complete the add commit pull and push steps",
     "repository": {
         "type": "git",
@@ -13,7 +13,8 @@
     "dependencies": {
         "chalk": "^2.4.2",
         "commander": "^2.20.0",
-        "inquirer": "^6.5.0"
+        "inquirer": "^6.5.0",
+        "inquirer-autocomplete-prompt": "^1.0.1"
     },
     "bin": {
         "gitp": "./bin/gitp"
