@@ -1,6 +1,6 @@
 {
     "name": "pgit",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Auto complete the add commit pull and push steps",
     "repository": {
         "type": "git",
