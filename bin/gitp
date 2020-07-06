@@ -3,12 +3,13 @@
 const program = require('commander');
 const pkg = require('../package.json');
 const fromAddToPush = require('../lib/fromAddToPush');
-const { selectAndCheckoutBranch, createAndCheckoutNewBranch } = require('../lib/branch');
+const { selectAndDeleteBranch, selectAndCheckoutBranch, createAndCheckoutNewBranch } = require('../lib/branch');
 
 program.version(pkg.version, '-v,--version');
 
 program
   .option('-c --check', 'checkout local branch')
+  .option('-d --delete', 'delete local branch')
   .option('-n --newbranch <name>', 'checkout new branch')
   .option('-s --start', 'start work,Auto complete the add commit pull and push steps');
 
@@ -16,6 +17,10 @@ program.parse(process.argv);
 
 if (program.check) {
   selectAndCheckoutBranch();
+}
+
+if (program.delete) {
+  selectAndDeleteBranch();
 }
 
 if (program.newbranch) {
